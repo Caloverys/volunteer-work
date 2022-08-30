@@ -1,0 +1,151 @@
+<html>
+<head>
+	<script src="https://rawcdn.githack.com/akzhy/Vara/16e30acca2872212e28735cfdbaba696a355c780/src/vara.min.js"></script>
+	<style>
+		::root{
+			--opacity;
+		}
+		*{
+			font-family:sans-serif;
+		}
+       .horizontal_center{
+       	display: flex;
+       	justify-content: center ;
+      
+       	width: 100%;
+       		
+
+       }
+       #startpage_image{
+       	width: 80%;
+       	height: 60vh;
+
+
+
+       }
+       .box-shadow-1{
+       	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+       }
+       .change_position{
+ 	position: fixed;
+ 	top: calc(15% + 5px);
+ 	margin: 0;
+
+       }
+       #icon{
+       	width: 30px;
+       	height: 30px;
+       }
+       #header{
+       	height: 15vh;
+       	width: 100vw;
+       	position: absolute;
+       	top: 0;
+       	left: 0;
+        margin: 0;
+
+       }
+       .box-shadow-2{
+       	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+       }
+       .vertical_center{
+       	height: 100%;
+       	display: flex;
+         align-items: center;
+       }
+       .big_margin{
+         margin: 1%;
+       }
+       hr{
+       	width: 100vw;
+    background-color: rgb(220, 220, 220);
+    border: none;
+    height: 5px;
+    text-align: center;
+    position: fixed;
+    margin: 0;
+    left: 0;
+    top: 15%;
+       }
+       .box-shadow-3{
+       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+       }
+       #brand_name{
+       	width: 45%;
+       }
+       .button{
+            background: none;
+            border: none;
+            font-size: 1.25em;
+            text-decoration: none;
+       }
+       .button:after{
+    	content: "";
+    	display: block;
+
+    	height: 2px;
+    	background: rgb(105,105,105);
+    	
+    	width: 0;
+
+    }
+     .selected:after{
+    	width: 100% !important;
+    	transition: width 0.5s linear;
+}
+.button:hover{
+	text-decoration: underline;
+	text-decoration-color:rgb(105,105,105,0.4) ;
+
+}
+
+       
+	</style>
+</head>
+    <body>
+    	<div class='horizontal_center change_position'>
+
+       <img id='startpage_image' class='box-shadow-3' src="https://athenslandtrust.org/wp-content/uploads/2020/04/Welcome-to-the-West-Broad-Farmers-Market.png">
+   </div>
+   <hr>
+   <div id='header' class='box-shadow-1'>
+   	   <div class='vertical_center'>
+   	   	  <img id='icon' class='big_margin'src='https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://wbfm.locallygrown.net/&size=16'>
+
+       <h2 class='big_margin' id='brand_name'></h2>
+
+       <button class='button big_margin selected'>About</button>
+       <button class='button big_margin'>Market</button>
+       <button class='button big_margin'>Recipes</button>
+       <button class='button big_margin'>Weblog</button>
+       <button class='button big_margin'>FAQ </button>
+       <button class='button big_margin'>Growers</button>
+       <button class='button big_margin'>Sign in</button>
+
+     
+   </div>
+   </div>
+   </div>
+   <script>
+   		document.querySelectorAll('.button').forEach(button =>{
+		button.addEventListener('click',function(){
+			
+			document.querySelector('.selected').classList.remove('selected');
+				document.documentElement.style.setProperty('--width',"100%")
+			button.classList.add('selected');
+
+		
+		})
+
+	})
+   	let text = new Vara("#brand_name", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
+  text: "West Broad Farmers Market",
+  fontSize: 38,
+  x:10, 
+  y:10
+}], {
+  strokeWidth: 2
+});
+   </script>
+    </body>
+</html>
