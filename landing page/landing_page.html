@@ -133,25 +133,23 @@ pointer-events: none;
    </div>
    </div>
    <script>
-   		document.querySelectorAll('.button').forEach(button =>{
-		button.addEventListener('click',function(){
-			
-			document.querySelector('.selected').classList.remove('selected');
-				document.documentElement.style.setProperty('--width',"100%")
-			button.classList.add('selected');
+ document.querySelectorAll('.button').forEach(button => {
+  button.addEventListener('click', function() {
 
-		
-		})
+    document.querySelector('.selected').classList.remove('selected');
+    document.documentElement.style.setProperty('--width', "100%")
+    button.classList.add('selected');
 
-	})
-   	let text = new Vara("#brand_name", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
+  })
+
+})
+let text = new Vara("#brand_name", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
   text: "West Broad Farmers Market",
-  fontSize: 38,
-  x:10, 
-  y:10
-}], {
-  strokeWidth: 2
-});
+  fontSize: 48,
+  strokeWidth: 2,
+  color: "black",
+  x: 15
+}]);
    </script>
     </body>
 </html>
